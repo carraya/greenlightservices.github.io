@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +20,92 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
+  <style>
+    /* Navigation Menu - Mobile View */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu img {
+  margin-right: 10px; /* Add some space between the image and text */
+  width: 20px; /* Adjust as necessary */
+  height: auto;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+
+/* Mobile Nav Toggle Button */
+.mobile-nav-toggle {
+  display: none; /* Hidden on larger screens, shown on smaller screens */
+  position: relative;
+  background-color: #4CAF50; /* Green background to match the 'GreenLight Services' theme */
+  border: none; /* Remove border */
+  font-size: 24px; /* Adjust icon size */
+  color: white; /* Icon color */
+  padding: 10px 20px; /* Padding for larger touch area */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor pointer to indicate clickable */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+@media (max-width: 992px) {
+  /* Show the toggle button on small screens */
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  /* Hide the logo text to save space */
+  .logo a span {
+    display: none;
+  }
+
+  /* Adjust menu items for mobile */
+  .nav-menu {
+    display: none;
+    background: rgba(30, 34, 39, 0.9);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav-menu li {
+    padding: 10px;
+    margin: 0 15px;
+    list-style: none;
+  }
+
+  .nav-menu a {
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Display the nav menu as a column */
+  .nav-menu ul {
+    flex-direction: column;
+  }
+}
+
+  </style>
   
 </head>
 <body>
@@ -26,44 +113,22 @@
   <!-- Navbar -->
 
   <header id="header" class="fixed-top" style="background-color: rgba(30, 34, 39, 0.7);">
-    <div class="container d-flex align-items-center">
+  <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html"><span style="color: rgb(0,255,0);">Green</span>Light Services</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    <h1 class="logo mr-auto"><a class="logo" href="index.html"><span class="logo" style="color: rgb(0,255,0);">Green</span><span class="logo">Light Services</span></a></h1>
+<button type="button" class="mobile-nav-toggle d-lg-none"><i class="fas fa-bars"></i></button>
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <!-- <li class="active"><a href="index.html">Home</a></li> -->
-          <li><a href="http://nebula.wsimg.com/1e9853569ebb2d8f0bc43bd5961b5068?AccessKeyId=097665C52F4B3C01D413&disposition=0&alloworigin=1"><img src="images/flag-button-round-250.png" alt=""> ACE e-Manifest Form</a></li>
-          <li><a href="http://nebula.wsimg.com/60f64cd877b7b34cc70f51d10be31a28?AccessKeyId=097665C52F4B3C01D413&disposition=0&alloworigin=1"><img src="images/flag-button-round-250 (1).png" alt=""> ACI e-Manifest Form</a></li>
-          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-          <!-- <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a href="#contact">Contact</a></li>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="http://nebula.wsimg.com/1e9853569ebb2d8f0bc43bd5961b5068?AccessKeyId=097665C52F4B3C01D413&disposition=0&alloworigin=1"><img src="images/flag-button-round-250.png" alt=""> ACE e-Manifest Form</a></li>
+        <li><a href="http://nebula.wsimg.com/60f64cd877b7b34cc70f51d10be31a28?AccessKeyId=097665C52F4B3C01D413&disposition=0&alloworigin=1"><img src="images/flag-button-round-250 (1).png" alt=""> ACI e-Manifest Form</a></li>
+        <li><a href="/assets/paps-pars-order-form.pdf">PAPS & PARS Barcode Labels</a></li>
+      </ul>
+    </nav>
 
-        </ul> -->
-      </nav><!-- .nav-menu -->
+  </div>
+</header>
 
-      <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
-
-    </div>
-  </header>
 
   <!-- Banner -->
 
@@ -314,8 +379,6 @@
           <p><strong>Need border crossing labels, PAPS, or PARS? Need assistance transporting through the Canada/Mexico/U.S. border? Call or E-mail us now!</strong></p>
         </div>
 
-        <!-- <div class="container" data-aos="fade-up"> -->
-
         <div class="section align-items-center" style="text-align: center; padding-top: 2vh;">
           <h1 style="color: rgb(0, 179, 0); font-size: 30px;"><strong>TOLL FREE</strong></h1>
           <h1 style="font-size: 30px;">1-800-420-6217</h1>
@@ -329,43 +392,18 @@
           <h1 style="font-size: 15px;"><a href="mailto:support@greenlightservices.net" style="color: #444444;">SUPPORT@GREENLIGHTSERVICES.NET</a></h1>
           <h1 style="font-size: 15px;"><a href="mailto:greenlightservices@gmail.com" style="color: #444444;">GREENLIGHTSERVICES@GMAIL.COM</a></h1>
         </div>
-          <!-- <div class="row justify-content-center">
-            <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-              <div class="row justify-content-center">
-                <h4 style="text-align: center; color: rgb(0, 179, 0);"><strong>TOLL FREE</strong></h4>
-                <p style="text-align: center; font-size: 30px;"><strong>1-800-420-6217</strong></p>
-              </div>
-            </div>
-  
-  
-            <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-              <div class="row justify-content-center">
-                <h4 style="text-align: center; color: rgb(0, 179, 0);"><strong>FAX NUMBER</strong></h4>
-                <p style="text-align: center; font-size: 30px;"><strong>757-299-8163</strong></p>
-              </div>
-            </div>
-  
-            
-  
-          </div> -->
-          <!-- <div class="row justify-content-center">
-            <div class="col-xl-3" data-aos="zoom-in" data-aos-delay="400">
-                <div class="row justify-content-center">
-                <h4 style="text-align: center; color:rgb(0, 179, 0);"><strong>E-MAIL</strong></h4>
-                <p style="text-align: center; font-size: 25px;"><a href="mailto:support@greenlightservices.net" style="color: #444444;"><strong>SUPPORT@GREENLIGHTSERVICES.NET</strong></a></p>
-              </div>
-              <div class="row justify-content-center">
-                <p style="text-align: center; font-size: 25px;"><a href="mailto:greenlightservices@gmail.com" style="color: #444444;"><strong>GREENLIGHTSERVICES@GMAIL.COM</strong></a></p>
-              </div>
-            </div>
-          </div> -->
-          
-  
-        <!-- </div> -->
     </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+      document.addEventListener("DOMContentLoaded", function() {
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  mobileNavToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+});
     </script>
 </body>
 </html>
